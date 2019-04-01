@@ -1,0 +1,108 @@
+System.out.print(pLatinV);
+
+//        for(int i = 0; i < this.usrInpt.length(); ++i) {
+//            if (this.phrase[i].charAt(0) == 'a' || this.phrase[i].charAt(0) == 'e' || this.phrase[i].charAt(0) == 'i' || this.phrase[i].charAt(0) == 'o' || this.phrase[i].charAt(0) == 'u') {
+//                this.pLatinV = this.phrase[i] + "ay ";
+//                System.out.print(this.pLatinV);
+//            }
+//
+//            if (!this.phrase[i].subSequence(0, 2).equals('a') || !this.phrase[i].subSequence(0, 2).equals('e') || !this.phrase[i].subSequence(0, 2).equals('i') || !this.phrase[i].subSequence(0, 2).equals('o') || !this.phrase[i].subSequence(0, 2).equals('u')) {
+//                this.pLatinC = this.phrase[i].substring(2, this.phrase[i].length()) + this.phrase[i].substring(0, 2) + "ay ";
+//                System.out.println(this.pLatinC);
+//                System.out.println(this.phrase[i].subSequence(0, 2));
+//            }
+//        }
+
+    }// END of convert() Method
+
+
+//
+//    public void getInpt() {
+//
+//    }// end of getInpt() Method
+//
+----------------------------------------------------------------------
+                else if ((!(phrase[i].substring(0,1).equals ('a')) || !(phrase[i].substring(0,1).equals('e')) ||
+                    !(phrase[i].substring(0,1).equals('i')) || !(phrase[i].substring(0,1).equals('o')) ||
+                    !(phrase[i].substring(0,1).equals('u')) && !(phrase[i].substring(1,2).equals('a')) || !(phrase[i].substring(1,2).equals('e')) ||
+                    !(phrase[i].substring(1,2).equals('i')) || !(phrase[i].substring(1,2).equals('o')) ||
+                    !(phrase[i].substring(1,2).equals('u'))))
+                        pLatinC = phrase[i].substring(1, phrase[i].length()) + phrase[i].substring(0,1) + "ay";
+                        System.out.println(pLatinC);
+//                    else
+
+//            System.out.print(pLatinV + pLatinC);
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+/*
+Author: J White
+Date: 3/26/2019
+Task: Pig Latin – Pig Latin is a game of alterations played on the English language game.
+To create the Pig Latin form of an English word the initial consonant sound is transposed
+to the end of the word and an ay is affixed (Ex.: "banana" would yield anana-bay).
+Read Wikipedia for more information on rules.
+
+*/
+
+package com.company;
+
+// imports the java Scanner libraries
+import java.util.Scanner;
+
+
+// Original Version
+// Class that hold the main parts (methods and variables) to help convert words or phrases
+// into pig latin
+public class PigLatin {
+
+    // Instance variable declaration for the PigLa class
+    String usrInpt;     // holds the users input for the word or phrase to convert
+    String[] phrase;      // places the word/phrase into an array
+    String pLatinV;     // used to hold the converted Pig Latin words that start with a vowel
+    String pLatinC;     // used to hold the converted Pig Latin words that start with a single or double consonant
+
+//    String vowels[] = {"a","e","i","o","u"};
+
+    //
+    public void convert() {
+
+        // App displays a welcome message to the user
+        System.out.println("Welcome to the Igpay Atinlay Onvertercay (Pig Latin Converter)!!");
+        System.out.println("");
+        System.out.println("Please enter a word or phrase that you would like to convert to Pig Latin.");
+        System.out.print("Enter a word or phrase here: ");
+
+//        getInpt();
+
+        Scanner scanner = new Scanner(System.in);
+        usrInpt = scanner.nextLine();
+
+        System.out.println(usrInpt.split(" "));
+
+        // FOR loop to print out the individual word for the word or phrase entered
+        for (int i = 0; i < usrInpt.length(); i++) {
+
+            // test to make sure that it is reading/hold user's input
+            // System.out.println(phrase[i]);
+
+//            if ((phrase[i].charAt(0) == 'a') || (phrase[i].charAt(0) == 'e') || (phrase[i].charAt(0) == 'i') ||
+//                    (phrase[i].charAt(0) == 'o') || (phrase[i].charAt(0) == 'u')) {
+//                pLatinV = phrase[i] + "ay";
+//                System.out.println(pLatinV);
+
+//            }
+ //           else
+               // pLatinC = phrase[i].substring(1, phrase[i].length()) + phrase[i].substring(0,1) + "ay";
+
+            System.out.print(pLatinV);
+            System.out.println(pLatinC);
+
+        }//END of For loop
+
+//        System.out.print(phrase.length);
+//        System.out.print(usrInpt.length());
+    } // END of convert()
+
+
+} // END PigLatin Class
