@@ -1,0 +1,27 @@
+Date: 4/2/2019
+
+HOW TO GET/RECEIVE INPUT FROM THE USER
+======================================
+
+TEST ONE -- Taking input from the the user
+// Message to the user to enter in information (number)
+// System.out.print("Please Enter in a number: ");
+
+// will take in a simple(?) integer value in from the user
+int a = scanner.nextInt();
+
+// prints out message to ensure that we are getting in any input.
+System.out.println("a = "+a);
+
+-------------------------------------------------------------------
+
+// TEST TWO:
+// Message to the user to enter in information (a character)
+System.out.print("Please enter in a character: ");
+
+// Will only take in the character in the first position of the string
+char c = scanner.next().charAt(0);
+
+// displays value of c as a check to ensure that the program is taken in
+// and printing out the correct information
+System.out.println("c = " +c);
